@@ -408,28 +408,28 @@ img {
   overflow: hidden;
 }
 .checkbox-icon {
-  display: inline-block;
+  display: flex;
+  align-items: center;
   width: 16px;
   height: 15px;
   margin-left: 15px;
   margin-right: 9px;
   border: 2px solid var(--secondary-color);
   border-radius: 2px;
-  transition: fill var(--animation-time) var(--cubic),
-    border-color var(--animation-time) var(--cubic);
+  fill: var(--second-main-color);
+  transition: border-color var(--animation-time) var(--cubic);
 }
 .checkbox:checked + .checkbox-icon {
   border-color: transparent;
   border-radius: 2px;
-  background-color: var(--blue-background-color);
-  /* background-image: url('../img/icon-check.svg'); */
+  background-color: var(--brand-color);
   background-size: contain;
   background-origin: border-box;
 }
 .checkbox:hover + .checkbox-icon,
 .checkbox:focus + .checkbox-icon {
   border-color: var(--brand-color);
-  fill: var(--brand-color);
+  fill: var(--second-main-color);
 }
 .terms-link {
   margin-left: 4px;
@@ -442,7 +442,6 @@ img {
   width: 200px;
   height: 50px;
   text-align: center;
-
   margin-right: auto;
   margin-left: auto;
   padding-top: 0;
@@ -455,6 +454,8 @@ img {
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   cursor: pointer;
+  transition: background-color var(--animation-time) var(--cubic),
+    box-shadow var(--animation-time) var(--cubic);
 }
 .form-button:hover,
 .form-button:focus {
